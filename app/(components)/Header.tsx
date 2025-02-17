@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { HiBookOpen, HiHome } from "react-icons/hi";
+import { HiHome } from "react-icons/hi";
 
 const Header = () => {
   return (
@@ -9,9 +9,9 @@ const Header = () => {
         <Link href="/">
           <HiHome className="text-3xl ml-5 cursor-pointer" />
         </Link>
-        <Link href="/TodoForm">
+        {/* <Link href="/TodoForm">
           <HiBookOpen className="text-3xl ml-5 cursor-pointer" />
-        </Link>
+        </Link> */}
       </div>
       <div className="text-2xl mr-5 font-semibold">Hendshake Todo List</div>
     </nav>

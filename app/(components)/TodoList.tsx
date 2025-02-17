@@ -9,7 +9,7 @@ interface TodoListProps {
 const TodoList: React.FC<TodoListProps> = ({ todos, onDeleteTodo }) => {
   return (
     <div>
-      <h2>Total Items: {todos.length}</h2>
+      <h2 className="text-4xl text-center">Total Todo List: {todos.length}</h2>
       {todos.map((todo) => (
         <TodoItem key={todo.id} todo={todo} onDeleteTodo={onDeleteTodo} />
       ))}

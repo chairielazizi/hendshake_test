@@ -19,11 +19,18 @@ export default function Home() {
     setTodos(storedTodos);
   }, []);
 
+  const handleDeleteTodo = (id: number) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+    saveTodos(updatedTodos);
+  };
+
   return (
     <div className="mt-5">
       <TodoForm onAddTodo={handleAddTodo} />
-      TodoList
-      <TodoList todos={todos} />
+      <div className="h-5"></div>
+      {/* TodoList */}
+      <TodoList todos={todos} onDeleteTodo={handleDeleteTodo} />
     </div>
   );
 }
