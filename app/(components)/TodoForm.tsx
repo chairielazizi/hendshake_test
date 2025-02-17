@@ -66,6 +66,8 @@ const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
           value={price}
           onChange={(event) => setPrice(Number(event.target.value))}
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          min={0}
+          step={0.01}
         />
       </div>
       <div className="mb-4">
@@ -79,7 +81,7 @@ const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
           id="type"
           value={type}
           onChange={(event) => setType(event.target.value)}
-          className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+          className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline text-black"
         >
           <option value="">Select a type</option>
           <option value="education">Education</option>
